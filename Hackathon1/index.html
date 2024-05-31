@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="todo-container">
+        <h2>Todo Input</h2>
+        <div id="todo-input" class="todo-input">
+            <input type="text" id="new-task" placeholder="Nhập công việc mới">
+            <button style="background-color: rgb(211, 234, 234);" onclick="addTask()">Thêm công việc mới</button>
+        </div>
+        <h2>Todo List</h2>
+        <div id="todo-list" class="todo-list"></div>
+        <div class="buttonCheck">
+            <button style="background-color: rgb(240, 167, 167); margin-top: 10px;" onclick="deleteAllTasks()">Xóa tất cả công việc</button>
+            <button class="delete-button" style="background-color: rgb(226, 122, 122);" onclick="deleteCompletedTasks()">Xóa công việc đã thực hiện</button>
+        </div>
+        
+    </div>
+
+    <!-- Modal for confirmation -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p>Bạn có chắc chắn muốn xóa tác vụ này không?</p>
+            <button onclick="cancelDelete()">Hủy bỏ</button>
+            <button onclick="confirmDelete()">Có</button>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
